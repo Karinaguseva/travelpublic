@@ -430,10 +430,19 @@ line-height: 42px;
 text-transform: uppercase;
 }
 
-.dest_nav{
-display: flex;
-justify-content: center;
-margin-bottom: 40px;
+.slider_active_left{
+  transform: translateX(860px);
+  transition: 0.4s all linear;
+}
+
+.slider_active_center{
+  transform: translateX(0);
+  transition: 0.4s all linear;
+}
+
+.slider_active_right{
+  transform: translateX(-860px);
+  transition: 0.4s all linear;
 }
 
 .circle_one {
@@ -444,12 +453,21 @@ background-color: rgba(242, 120, 92, 0.5);
 margin-right: 10px;
 }
 
+.circle_one_active{
+  background-color: #F2785C;
+}
+
+
 .circle_two{
 width: 20px;
 height: 20px;
 border-radius: 50%;
-background-color: #F2785C;
+background-color: rgba(242, 120, 92, 0.5);
 margin-right: 10px;
+}
+
+.circle_two_active{
+  background-color: #F2785C;
 }
 
 .circle_three{
@@ -458,6 +476,19 @@ height: 20px;
 border-radius: 50%;
 background-color: rgba(242, 120, 92, 0.5);
 }
+
+.circle_three_active{
+  background-color: #F2785C;
+}
+
+
+.dest_nav{
+display: flex;
+justify-content: center;
+margin-bottom: 40px;
+}
+
+
 
 .circle {
 transition: 0.7s;
