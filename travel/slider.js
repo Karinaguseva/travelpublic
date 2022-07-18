@@ -280,11 +280,68 @@
     function funonload() {
         secondDot.classList.add ('circle_two_active');
         arrowLeftRight.style.visibility = "hidden";
-        arrowRightLeft.style.visibility = "hidden";
     } 
     window.onload = funonload;
 
+    function clientWidth() {
+        if (document.documentElement.clientWidth == 390) {
+            sliderItem[0].classList.add ('slider_active_left');
+            sliderItem[0].classList.remove ('slider_active_center');
+            sliderItem[0].classList.remove ('slider_active_right');
+            sliderItem[1].classList.add ('slider_active_left');
+            sliderItem[1].classList.remove ('slider_active_center');
+            sliderItem[1].classList.remove ('slider_active_right');
+            sliderItem[2].classList.add ('slider_active_left');
+            sliderItem[2].classList.remove ('slider_active_center');
+            sliderItem[2].classList.remove ('slider_active_right');
+            sliderItem[3].classList.add ('slider_active_left');
+            sliderItem[3].classList.remove ('slider_active_center');
+            sliderItem[3].classList.remove ('slider_active_right');
+            sliderItem[4].classList.add ('slider_active_left');
+            sliderItem[4].classList.remove ('slider_active_center');
+            sliderItem[4].classList.remove ('slider_active_right');
+            firstDot.classList.add ('circle_one_active');
+            secondDot.classList.remove ('circle_two_active');
+            thirdDot.classList.remove ('circle_three_active');
+            arrowLeftCenter.classList.add('arrow_left_not');
+            arrowRightCenter.style.visibility = "hidden";
+            arrowRightLeft.style.visibility = "visible";
 
+            function funonload() {
+                secondDot.classList.remove ('circle_two_active');
+                arrowLeftRight.style.visibility = "hidden";
+            } 
+            window.onload = funonload;
+
+        } else if (document.documentElement.clientWidth == 1440) {
+            sliderItem[0].classList.add ('slider_active_center');
+            sliderItem[0].classList.remove ('slider_active_left');
+            sliderItem[0].classList.remove ('slider_active_right');
+            sliderItem[1].classList.add ('slider_active_center');
+            sliderItem[1].classList.remove ('slider_active_left');
+            sliderItem[1].classList.remove ('slider_active_right');
+            sliderItem[2].classList.add ('slider_active_center');
+            sliderItem[2].classList.remove ('slider_active_left');
+            sliderItem[2].classList.remove ('slider_active_right');
+            sliderItem[3].classList.add ('slider_active_center');
+            sliderItem[3].classList.remove ('slider_active_left');
+            sliderItem[3].classList.remove ('slider_active_right');
+            sliderItem[4].classList.add ('slider_active_center');
+            sliderItem[4].classList.remove ('slider_active_left');
+            sliderItem[4].classList.remove ('slider_active_right');
+            secondDot.classList.add ('circle_two_active');
+            firstDot.classList.remove ('circle_one_active');
+            thirdDot.classList.remove ('circle_three_active');
+            arrowLeftRight.style.visibility = "hidden";
+            arrowRightCenter.style.visibility = "visible";
+            arrowLeftCenter.style.visibility = "visible";
+            arrowRightCenter.classList.remove('arrow_right_not');
+            arrowLeftCenter.classList.remove('arrow_left_not');
+        }
+    }
+    window.addEventListener('resize', clientWidth);
+    clientWidth();
+    
 }());
 
 
