@@ -284,7 +284,7 @@
     window.onload = funonload;
 
     function clientWidth() {
-        if (document.documentElement.clientWidth == 390) {
+        if (document.documentElement.clientWidth <= 390) {
             sliderItem[0].classList.add ('slider_active_left');
             sliderItem[0].classList.remove ('slider_active_center');
             sliderItem[0].classList.remove ('slider_active_right');
@@ -313,7 +313,7 @@
             } 
             window.onload = funonload;
 
-        } else if (document.documentElement.clientWidth == 1440) {
+        } else if (document.documentElement.clientWidth <= 1440) {
             sliderItem[0].classList.add ('slider_active_center');
             sliderItem[0].classList.remove ('slider_active_left');
             sliderItem[0].classList.remove ('slider_active_right');
