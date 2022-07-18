@@ -647,17 +647,17 @@ text-transform: uppercase;
 
 .slider_active_left{
   transform: translateX(860px);
-  transition: 0.4s all linear;
+  transition: 0.8s all ease ;
 }
 
 .slider_active_center{
   transform: translateX(0);
-  transition: 0.4s all linear;
+  transition: 0.8s all ease ;
 }
 
 .slider_active_right{
   transform: translateX(-860px);
-  transition: 0.4s all linear;
+  transition: 0.8s all ease ;
 }
 
 .circle_one {
@@ -705,12 +705,12 @@ margin-bottom: 40px;
 
 
 
-.circle {
+/*.circle {
 transition: 0.7s;
 }
 .circle:hover {
 transform: scale(1.5);
-}
+}*/
 
 .dest_button_line{
 display: flex;
@@ -1003,7 +1003,7 @@ h2{
   transform: translateX(0);
 }
 
-.login_button_container, .logo_text, .arrow{
+.login_button_container, .logo_text, .arrow, .arrow_left_second, .arrow_right_second {
   display: none;
 }
 
@@ -1297,6 +1297,23 @@ h2{
   content: url(../assets/img/svg/rightarrow_opacity.svg);
 }
 
+
+.arrow_left_second{
+  display: flex;
+  top: calc(50% - 19px);
+  left: calc(50% - 169px);
+  position: absolute;
+  cursor: pointer;
+}
+
+.arrow_right_second{
+  display: flex;
+  top: calc(50% - 19px);
+  right: calc(50% - 169px);
+  position: absolute;
+  cursor: pointer;
+}
+
 .dest_nav{
   display: flex;
   justify-content: center;
@@ -1391,6 +1408,10 @@ h2{
 .journey_img{
   content: url(../assets/img/jpg/journeyMobile.jpg);
 }
+.dest1, .dest5{
+  display: none;
+}
+
 }
 
 @media(max-width: 362px){
@@ -1411,12 +1432,22 @@ h2{
   top: 170px
 }
 
-.dest1, .dest5{
-  display: none;
-}
-
 .slider_item {
   margin: 0 35px;
+}
+
+.arrow_left_second{
+  top: calc(50% - 19px);
+  left: calc(50% - 150px);
+  position: absolute;
+  cursor: pointer;
+}
+
+.arrow_right_second{
+  top: calc(50% - 20px);
+  right: calc(50% - 150px);
+  position: absolute;
+  cursor: pointer;
 }
 }
 
@@ -1424,6 +1455,10 @@ h2{
 
 @media (min-width: 801px){
 .dest_img_min, .account, .social_media, .nav_close, .dark_wrapper, .arrow{
+  display: none;
+}
+
+.arrow_left_second, .arrow_right_second{
   display: none;
 }
 }
