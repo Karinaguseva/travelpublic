@@ -117,7 +117,7 @@ document.body.onload = addElement;
 
 
   (function () {
-    const sliderItem = document.querySelectorAll('.slider');
+    const sliderItem = document.querySelectorAll('.slider_item');
     const firstDot = document.querySelector('.circle_one');
     const secondDot = document.querySelector('.circle_two');
     const thirdDot = document.querySelector('.circle_three');
@@ -150,7 +150,7 @@ document.body.onload = addElement;
         thirdDot.classList.remove ('circle_three_active');
         arrowLeft.classList.add('arrow_left_not');
         arrowRight.classList.remove('arrow_right_not');
-        const sliderItem = document.querySelectorAll('.slider')
+
     });
 
     secondDot.addEventListener('click', () => {
@@ -174,7 +174,6 @@ document.body.onload = addElement;
         thirdDot.classList.remove ('circle_three_active');
         arrowLeft.classList.remove('arrow_left_not');
         arrowRight.classList.remove('arrow_right_not');
-        const sliderItem = document.querySelectorAll('.slider')
     });
     
     thirdDot.addEventListener('click', () => {
@@ -198,7 +197,6 @@ document.body.onload = addElement;
         secondDot.classList.remove ('circle_two_active');
         arrowRight.classList.add('arrow_right_not');
         arrowLeft.classList.remove('arrow_left_not');
-        const sliderItem = document.querySelectorAll('.slider')
     });
 
     img1.addEventListener('click', () => {
@@ -220,7 +218,6 @@ document.body.onload = addElement;
         thirdDot.classList.add ('circle_three_active');
         firstDot.classList.remove ('circle_one_active');
         secondDot.classList.remove ('circle_two_active');
-        const sliderItem = document.querySelectorAll('.slider')
     });
 
     img2.addEventListener('click', () => {
@@ -242,7 +239,6 @@ document.body.onload = addElement;
         firstDot.classList.add ('circle_one_active');
         secondDot.classList.remove ('circle_two_active');
         thirdDot.classList.remove ('circle_three_active');
-        const sliderItem = document.querySelectorAll('.slider')
     });
 
     img3.addEventListener('click', () => {
@@ -264,7 +260,6 @@ document.body.onload = addElement;
         secondDot.classList.add ('circle_two_active');
         firstDot.classList.remove ('circle_one_active');
         thirdDot.classList.remove ('circle_three_active');
-        const sliderItem = document.querySelectorAll('.slider')
     });
     
         
@@ -288,7 +283,6 @@ document.body.onload = addElement;
         thirdDot.classList.add ('circle_three_active');
         firstDot.classList.remove ('circle_one_active');
         secondDot.classList.remove ('circle_two_active');
-        const sliderItem = document.querySelectorAll('.slider')
     });
 
     img5.addEventListener('click', () => {
@@ -310,7 +304,6 @@ document.body.onload = addElement;
         firstDot.classList.add ('circle_one_active');
         secondDot.classList.remove ('circle_two_active');
         thirdDot.classList.remove ('circle_three_active');
-        const sliderItem = document.querySelectorAll('.slider')
     });
 
     function funonload() {
@@ -318,16 +311,10 @@ document.body.onload = addElement;
     } 
     window.onload = funonload;
     
-    let length = sliderItem.classList.length;
+    let length = img3.classList.length;
     console.log(length);
 
-    
-    
-    
-        
-   
-    sliderMobile()
-    
+  
 
     /*const slide2Active = img3.classList.contains('slider_active_center');
  
