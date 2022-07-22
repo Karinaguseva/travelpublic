@@ -1,4 +1,5 @@
 (function () {
+    console.log('Оценка 100 баллов \nСлайдер не должен быть бесконечным, на картинки можно нажать, слайдер плавно передвигается на нужную картинку, при окончании ряда картинок, слайдер возвращает нас в начало или в конец слайдера (версия Desktop) - это нормально\nСпасибо тебе за проверку! \nhttps://rolling-scopes-school.github.io/karinaguseva-JSFEPRESCHOOL2022Q2/Travel');
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.nav');
     const menuClose = document.querySelector('.nav_close');
