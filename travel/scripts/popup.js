@@ -4,15 +4,15 @@
         button: "Sign In",
         bottom: "Don't have an account?",
         link: "Register"
-    }
+    };
     const signPopUp = {
         title: "Create account",
         button: "Sign Up",
         bottom: "Already have an account?",
         link: "Log in"
-    }
+    };
     const headerButton = document.querySelector('.login_button')
-    const popup = document.querySelector('.popup_wrapper');
+    const popup = document.querySelector('.wrapper_wrapper_popup');
     const popupReg = document.querySelector('.reg');
     const popupTitle = document.querySelector('.popup_title');
     const popupButton = document.querySelector('.sign');
@@ -21,12 +21,14 @@
     const accountBurger = document.querySelector('.account');
     const menu = document.querySelector('.nav');
     const darkWrapper = document.querySelector('.dark_wrapper');
-    
+    const loginContent = document.querySelector('.mail');
+    const passwordContent = document.querySelector('.password');
+
     function browserAlert() {
         let loginContent = document.querySelector('.mail').value;
         let passwordContent = document.querySelector('.password').value;
         alert(`Login: ${loginContent}\nPassword: ${passwordContent}`);
-    }
+    };
 
     function ChangePopUp(event) {
         let change = (event.target.innerHTML === "Register")?signPopUp:loginPopUp;
@@ -35,7 +37,7 @@
         popupButton.innerHTML = change.button;
         bottomText.innerHTML = change.bottom;
         popupReg.innerHTML = change.link;
-    }
+    };
 
     function callPopUp(call){
         document.querySelector('.burger').classList.remove('nav_active');
@@ -49,16 +51,13 @@
         darkWrapperPop.classList.add('dark_wrapper_pop_active');
         menu.classList.remove ('nav_active');
         darkWrapper.classList.remove ('dark_wrapper_active');
-    }
+    };
 
     function popUpClose(event) {
-        let target = event.target;
-        let popupActive = popup == target || popup.contains(target);
-        if (popup.classList.contains('popup_wrapper_active') && !popupActive) {
-            popup.classList.remove('popup_wrapper_active');
-            darkWrapperPop.classList.remove('dark_wrapper_pop_active');
+        let popupActive = popup == event.target || popup.contains(event.target);
+        if (popup.classList.contains('popup_wrapper_active') && !popupActive) {   
           }
-    }
+    };
 
     
 
@@ -66,7 +65,14 @@
     headerButton.addEventListener('click', callPopUp);
     accountBurger.addEventListener('click', callPopUp);
     popupButton.addEventListener('click', browserAlert);
-    document.addEventListener('click', popUpClose);
+    popup.addEventListener('click', (popUpClose)=>{
+    if (popUpClose.target.classList.contains('wrapper_wrapper_popup')){
+        popup.classList.remove('popup_wrapper_active');
+        darkWrapperPop.classList.remove('dark_wrapper_pop_active');
+        loginContent.value = '';
+        passwordContent.value = '';
+    }
+    });
 }())
 
 
