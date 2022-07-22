@@ -1,6 +1,6 @@
 (function(){
     const loginPopUp = {
-        title: "Login to your account",
+        title: "Log in to your account",
         button: "Sign In",
         bottom: "Don't have an account?",
         link: "Register"
